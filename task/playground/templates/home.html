@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Market Data Table Visualization</title>
+</head>
+<body>
+    <h1>Stock Market Data Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Trade Code</th>
+                <th>High</th>
+                <th>Low</th>
+                <th>Open</th>
+                <th>Close</th>
+                <th>Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item.date }}</td>
+                <td>{{ item.trade_code }}</td>
+                <td>{{ item.high }}</td>
+                <td>{{ item.low }}</td>
+                <td>{{ item.open }}</td>
+                <td>{{ item.close }}</td>
+                <td>{{ item.volume }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
